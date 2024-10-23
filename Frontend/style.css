@@ -1,0 +1,151 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body{
+    height: 100%;
+}
+
+body{
+    background-color: black;
+    font-family: "Raleway", sans-serif;
+}
+
+.container{
+    padding: 10px;
+    color: white;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header #avatar{
+    display: flex;
+    align-items: center;
+    gap:5px;
+}
+
+header #avatar-redondo{
+    padding: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.233);
+}
+
+header h2.logo{
+    color: white;
+    align-items: center;
+    display: flex;
+    gap: 10px;
+}
+
+header nav#navegacao ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+header nav#navegacao ul li{
+    padding: 10px;
+}
+
+header nav#navegacao ul li a{
+   text-decoration: none;
+   color: white;
+}
+
+header nav#navegacao ul li:first-child{
+    text-decoration: none;
+    background-color: white;
+    border-radius: 3px;
+ }
+
+ header nav#navegacao ul li:first-child > a{
+   color: black;
+ }
+
+
+ main #poster-destaque{
+    margin-top: 10px;
+    height: 400px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;   
+    gap: 10px; 
+ }
+
+ main #poster-destaque #poster-titulo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+ }
+
+ main #poster-destaque #poster-titulo h1{
+    color: white;
+    font-size: 65px;
+ }
+ main #poster-destaque #poster-titulo p{
+    color: white;
+ }
+
+
+ main #poster-destaque #poster-video video{
+    width: 100%;
+    height: 400px;
+    object-fit: cover; 
+    border-radius: 3px;
+ }
+
+
+ main #poster-destaque #poster-tag{
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+ }
+
+ .tag-genero{
+    background-color: orange;
+    padding: 10px;
+    border-radius: 3px;
+    font-weight: bold;
+ }
+
+ .catalogo{
+    margin-top: 30px;
+ }
+
+ .catalogo .catalogo-itens{
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 35px;
+ }
+
+ .catalogo .catalogo-itens .item{   
+    height: 280px;
+    min-width: 150px;
+    border-radius: 3px;
+    background-color: blue;
+    box-shadow: rgba(255, 255, 255, 0.2) 0px 7px 29px 0px;
+ }
+
+ .catalogo .catalogo-itens .item:hover{   
+   scale: 1.1;
+   cursor: pointer;
+ }
+
+figure, img{
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+ }
