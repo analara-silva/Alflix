@@ -23,13 +23,21 @@ app.get('/filmes', async (req, res) => {
     res.json(dadosbanco[0])
 })
 
-app.post('/login', (req, res) =>{
+app.post('/login', async (req, res) =>{
     let usuario = req.body.usuario
     let senha = req.body.senha
+    let status = false
 
-    console.log(usuario)
-    console.log(senha)
+    const sql = 
+        `select * from usuarios
+        where email = ? and senha = ?`
 
-    res.send('ok')
+    const [rows] = await conn.execute(sql, [usuario, senha])
+    if(rows.length > 0)
+    {
+        status = true
+    }
+
+    res.send('Usuário autenticado: '+status)
 })
 
